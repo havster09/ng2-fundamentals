@@ -5,6 +5,8 @@ import { EventsAppComponent } from './events-app.component'
 import { EventsListComponent } from './events/events-list.component'
 import { EventThumbnailComponent } from './events/event-thumbnail.component'
 import { NavBarComponent } from './nav/navbar.component'
+import {SessionListComponent} from "./events/event-details/session-list.component";
+import {PlayerThumbnailComponent} from "./events/player-thumbnail.component";
 
 @NgModule({
   imports: [BrowserModule],
@@ -12,7 +14,9 @@ import { NavBarComponent } from './nav/navbar.component'
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
-    NavBarComponent
+    NavBarComponent,
+    SessionListComponent,
+    PlayerThumbnailComponent
   ],
   bootstrap: [EventsAppComponent]
 })

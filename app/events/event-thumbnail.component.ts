@@ -12,6 +12,7 @@ import { Component, Input } from '@angular/core'
         <span>Location: {{event.location.address}}</span>
         <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
       </div>
+        <session-list [sessions]="event.sessions"  (logToParent)="handleLogToParent($event)"></session-list>
     </div>
   `,
   styles: [`
@@ -20,6 +21,8 @@ import { Component, Input } from '@angular/core'
   `]
 })
 export class EventThumbnailComponent {
-  @Input() event:any
-
+  @Input() event:any;
+  handleLogToParent(event) {
+    console.log(event)
+  }
 }
