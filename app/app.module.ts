@@ -1,23 +1,27 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
+import {NgModule} from '@angular/core'
+import {BrowserModule} from '@angular/platform-browser'
 
-import { EventsAppComponent } from './events-app.component'
-import { EventsListComponent } from './events/events-list.component'
-import { EventThumbnailComponent } from './events/event-thumbnail.component'
-import { NavBarComponent } from './nav/navbar.component'
-import {SessionListComponent} from "./events/event-details/session-list.component";
-import {PlayerThumbnailComponent} from "./events/player-thumbnail.component";
+import {EventsAppComponent} from './events-app.component'
+import {EventListComponent} from "./events/events-list.component";
+import {EventThumbnailComponent} from "./events/event-thumbnail.component";
+import {RouterModule} from "@angular/router";
+import {appRoutes} from "./routes";
+import {NavBarComponent} from "./nav/navbar.component";
+import {PlayersListComponent} from "./players/player-list.component";
 
 @NgModule({
-  imports: [BrowserModule],
-  declarations: [
-    EventsAppComponent,
-    EventsListComponent,
-    EventThumbnailComponent,
-    NavBarComponent,
-    SessionListComponent,
-    PlayerThumbnailComponent
-  ],
-  bootstrap: [EventsAppComponent]
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(appRoutes)
+    ],
+    declarations: [
+        NavBarComponent,
+        EventsAppComponent,
+        EventThumbnailComponent,
+        EventListComponent,
+        PlayersListComponent
+    ],
+    bootstrap: [EventsAppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
