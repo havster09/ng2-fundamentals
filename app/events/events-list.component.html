@@ -1,9 +1,10 @@
-<players-list></players-list>
-<div>
-    <h1>Some Events Baby</h1>
+<h1>Some Events Baby</h1>
+<div *ngFor="let event of events">
+    <button class="btn btn-default" (click)="thumbnail.logPoo(thumbnail.somePoo)">Poo {{thumbnail.somePoo}}</button>
     <hr/>
     <event-thumbnail
+            #thumbnail
             (eventClick)="handleTestClick($event)"
             (eventMouseOver)="handleMouseOver($event)"
-            [event]="event1"></event-thumbnail>
+            [event]="event"></event-thumbnail>
 </div>

@@ -8,8 +8,8 @@ import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes";
 import {NavBarComponent} from "./nav/navbar.component";
 import {PlayersListComponent} from "./players/player-list.component";
-
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {SessionListComponent} from "./events/event-details/session-list.component";
+import {JunkComponent} from "./junk/junk.component";
 
 @NgModule({
     imports: [
@@ -21,6 +21,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         EventsAppComponent,
         EventThumbnailComponent,
         EventListComponent,
+        SessionListComponent,
+        JunkComponent,
         PlayersListComponent
     ],
     bootstrap: [EventsAppComponent]
