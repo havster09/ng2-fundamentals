@@ -9,10 +9,12 @@ import {appRoutes} from "./routes";
 import {NavBarComponent} from "./nav/navbar.component";
 import {PlayersListComponent} from "./players/player-list.component";
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 @NgModule({
     imports: [
         BrowserModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {useHash:true})
     ],
     declarations: [
         NavBarComponent,
