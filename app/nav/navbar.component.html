@@ -6,10 +6,14 @@
 
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a [routerLink]="['/players']" routerLinkActive="active">Players</a></li>
                 <li>
-                    <a [routerLink]="['/events']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-true}">All Events</a>
+                    <a [routerLink]="['/players']" routerLinkActive="active">Players</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/games']" routerLinkActive="active">Games</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/events']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">All Events</a>
                 </li>
                 <li><a [routerLink]="['/events/new']" routerLinkActive="active">Create Event</a></li>
                 <li class="dropdown">
